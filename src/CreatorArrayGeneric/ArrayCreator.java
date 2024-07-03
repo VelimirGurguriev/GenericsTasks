@@ -4,8 +4,9 @@ public class ArrayCreator <T> {
     private T[] array;
     private int length;
 
-    public ArrayCreator() {
-
+    public ArrayCreator(int length) {
+        this.length = length;
+        this.array = (T[]) new Object[length];
     }
 
     public T[] create(int length, T item) {
