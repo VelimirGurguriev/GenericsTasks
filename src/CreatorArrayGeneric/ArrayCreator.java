@@ -1,24 +1,23 @@
 package CreatorArrayGeneric;
 
+import java.lang.reflect.Array;
+
 public class ArrayCreator <T> {
-    private T[] array;
-    private int length;
 
-    public ArrayCreator(int length) {
-        this.length = length;
-        this.array = (T[]) new Object[length];
-    }
-
-    public T[] create(int length, T item) {
+    public static <T> T[] create(int length, T item) {
+        T[] array = (T[]) new Object[length];
         for (int i = 0; i < length; i++) {
-            this.array[i] = item;
+            array[i] = item;
         }
-        return this.array;
+        return array;
     }
 
-    public T[] create(Class<T> currentClass, int length, T item) {
-
-        return this.array;
+    public static <T> T[] create(Class<T> classType, int length, T item) {
+        T[] array = (T[]) Array.newInstance(classType, length);
+        for (int i = 0; i < length; i++) {
+            array[i] = item;
+        }
+        return array;
     }
 
 }
