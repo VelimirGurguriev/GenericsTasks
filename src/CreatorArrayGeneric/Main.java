@@ -8,6 +8,9 @@ public class Main {
         // testing generic implementation with integers
         ArrayCreator<Integer> arrOfInts = new ArrayCreator<>(length);
         System.out.println(Arrays.toString(arrOfInts.create(length, 2)));
-        
+
+        // testing generic implementation with strings
+        ArrayCreator<String> arrOfStrings = new ArrayCreator<>(length);
+        System.out.println(Arrays.toString(arrOfStrings.create(length, "abc")));
     }
 }
