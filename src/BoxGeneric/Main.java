@@ -8,12 +8,20 @@ public class Main {
 
         int numberOfObjects = Integer.parseInt(scanner.nextLine());
 
+        // generic box, class type String
         for (int i = 0; i < numberOfObjects; i++) {
             String userInput = scanner.nextLine();
             Box<String> stringBox = new Box<>(userInput);
             System.out.println(stringBox);
         }
 
+        // generic box, class type Integer
+        for (int i = 0; i < numberOfObjects; i++) {
+            int userInput = Integer.parseInt(scanner.nextLine());
+            Box<Integer> integerBox = new Box<>(userInput);
+            System.out.println(integerBox);
+        }
+        
         scanner.close();
     }
 }
