@@ -21,7 +21,7 @@ public class Main {
             Box<Integer> integerBox = new Box<>(userInput);
             System.out.println(integerBox);
         }
-        
+
         scanner.close();
     }
 }
