@@ -5,5 +5,9 @@ public class Main {
         // testing the generic scale class with integers
         Scale<Integer> scale = new Scale<>(1,2);
         System.out.println(scale.getHeavier());
+
+        // testing the generic scale with two equal double numbers
+        Scale<Double> doubleScale = new Scale<>(3.14,3.14);
+        System.out.println(doubleScale.getHeavier());
     }
 }
