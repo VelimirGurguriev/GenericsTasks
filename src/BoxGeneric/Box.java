@@ -6,7 +6,7 @@ public class Box <T> {
     public Box(T item) {
         this.item = item;
     }
-    
+
     @Override
     public String toString() {
         return item.getClass().getName() + ": " + item;
