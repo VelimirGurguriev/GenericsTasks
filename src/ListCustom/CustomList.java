@@ -16,6 +16,10 @@ public class CustomList <T extends Comparable<T>> implements Comparable<Box<T>> 
         this.elements.add(element);
     }
 
+    public T remove(int index) {
+        return this.elements.remove(index);
+    }
+
     @Override
     public int compareTo(Box<T> o) {
         return 0;
