@@ -9,7 +9,7 @@ public class IntegersBox {
         Scanner scanner = new Scanner(System.in);
 
         int numberOfObjects = Integer.parseInt(scanner.nextLine());
-        
+
         // generic box, class type Integer
         boxOfIntegers(numberOfObjects, scanner);
 
