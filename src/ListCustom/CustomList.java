@@ -1,11 +1,9 @@
 package ListCustom;
 
-import BoxGeneric.Box;
-
 import java.util.ArrayList;
 import java.util.List;
 
-public class CustomList <T extends Comparable<T>> implements Comparable<Box<T>> {
+public class CustomList <T extends Comparable<T>> implements Comparable<CustomList<T>> {
     private final List<T> elements;
 
     public CustomList() {
@@ -59,8 +57,19 @@ public class CustomList <T extends Comparable<T>> implements Comparable<Box<T>> 
         return maxElement;
     }
 
+
     @Override
-    public int compareTo(Box<T> o) {
-        return 0;
+    public int compareTo(CustomList<T> other) {
+        if (this.elements.isEmpty() && other.elements.isEmpty()) {
+            return 0;
+        } else if (this.elements.isEmpty()) {
+            return -1;
+        } else if (other.elements.isEmpty()) {
+            return 1;
+        } else {
+            T thisMax = this.getMax();
+            T otherMax = other.getMax();
+            return thisMax.compareTo(otherMax);
+        }
     }
 }
