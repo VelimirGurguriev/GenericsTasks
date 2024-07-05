@@ -32,6 +32,7 @@ public class CustomList <T extends Comparable<T>>  {
         elements.set(secondIndex, tempElement);
     }
 
+    // method to count the elements within the list that are greater than the given element
     public int countGreaterThan(T compareElement) {
         int numOfGreaterElements = 0;
         for (T element : elements) {

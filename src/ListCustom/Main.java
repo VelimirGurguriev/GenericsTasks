@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
+        // testing custom list generic with Strings
         CustomList<String> customList = new CustomList<>();
 
         while (true) {
