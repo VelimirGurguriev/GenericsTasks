@@ -44,6 +44,21 @@ public class CustomList <T extends Comparable<T>> implements Comparable<Box<T>> 
         return numOfGreaterElements;
     }
 
+    public T getMax() {
+        if (elements.isEmpty()) {
+            throw new IllegalStateException("Empty list");
+        }
+
+        T maxElement = elements.get(0);
+        for (int i = 1; i < elements.size(); i++) {
+            if (elements.get(i).compareTo(maxElement) > 0) {
+                maxElement = elements.get(i);
+            }
+        }
+
+        return maxElement;
+    }
+
     @Override
     public int compareTo(Box<T> o) {
         return 0;
