@@ -34,6 +34,16 @@ public class CustomList <T extends Comparable<T>> implements Comparable<Box<T>> 
         elements.set(secondIndex, tempElement);
     }
 
+    public int countGreaterThan(T compareElement) {
+        int numOfGreaterElements = 0;
+        for (T element : elements) {
+            if (element.compareTo(compareElement) > 0) {
+                numOfGreaterElements++;
+            }
+        }
+        return numOfGreaterElements;
+    }
+
     @Override
     public int compareTo(Box<T> o) {
         return 0;
