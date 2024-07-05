@@ -2,11 +2,14 @@ package ListCustom;
 
 import BoxGeneric.Box;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CustomList <T extends Comparable<T>> implements Comparable<Box<T>> {
-    private T element;
+    private final List<T> elements;
 
     public CustomList(T element) {
-        this.element = element;
+        this.elements = new ArrayList<>();
     }
 
     @Override
