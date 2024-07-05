@@ -72,6 +72,12 @@ public class CustomList <T extends Comparable<T>> implements Comparable<CustomLi
         return minElement;
     }
 
+    public void print() {
+        for (T element : elements) {
+            System.out.println(element);
+        }
+    }
+
     @Override
     public int compareTo(CustomList<T> other) {
         if (this.elements.isEmpty() && other.elements.isEmpty()) {
