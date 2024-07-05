@@ -24,5 +24,5 @@ public class StringsBox {
             System.out.println(stringBox);
         }
     }
-    
+
 }
