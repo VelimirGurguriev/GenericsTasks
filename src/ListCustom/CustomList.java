@@ -3,7 +3,7 @@ package ListCustom;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CustomList <T extends Comparable<T>> implements Comparable<CustomList<T>> {
+public class CustomList <T extends Comparable<T>>  {
     private final List<T> elements;
 
     public CustomList() {
@@ -75,21 +75,6 @@ public class CustomList <T extends Comparable<T>> implements Comparable<CustomLi
     public void print() {
         for (T element : elements) {
             System.out.println(element);
-        }
-    }
-
-    @Override
-    public int compareTo(CustomList<T> other) {
-        if (this.elements.isEmpty() && other.elements.isEmpty()) {
-            return 0;
-        } else if (this.elements.isEmpty()) {
-            return -1;
-        } else if (other.elements.isEmpty()) {
-            return 1;
-        } else {
-            T thisMax = this.getMax();
-            T otherMax = other.getMax();
-            return thisMax.compareTo(otherMax);
         }
     }
 
