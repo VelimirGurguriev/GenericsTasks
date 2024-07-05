@@ -28,6 +28,12 @@ public class CustomList <T extends Comparable<T>> implements Comparable<Box<T>> 
         }
     }
 
+    public void swap(int firstIndex, int secondIndex) {
+        T tempElement = elements.get(firstIndex);
+        elements.set(firstIndex, elements.get(secondIndex));
+        elements.set(secondIndex, tempElement);
+    }
+
     @Override
     public int compareTo(Box<T> o) {
         return 0;
