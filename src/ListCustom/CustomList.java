@@ -20,6 +20,14 @@ public class CustomList <T extends Comparable<T>> implements Comparable<Box<T>> 
         return this.elements.remove(index);
     }
 
+    public boolean contains(T element) {
+        if (elements.contains(element)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     @Override
     public int compareTo(Box<T> o) {
         return 0;
