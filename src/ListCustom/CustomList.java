@@ -13,7 +13,7 @@ public class CustomList <T extends Comparable<T>> implements Comparable<Box<T>> 
     }
 
     public void add(T element) {
-        
+        this.elements.add(element);
     }
 
     @Override
