@@ -57,6 +57,20 @@ public class CustomList <T extends Comparable<T>> implements Comparable<CustomLi
         return maxElement;
     }
 
+    public T getMin() {
+        if (elements.isEmpty()) {
+            throw new IllegalStateException("List is empty");
+        }
+
+        T minElement = elements.get(0);
+        for (int i = 1; i < elements.size(); i++) {
+            if (elements.get(i).compareTo(minElement) < 0) {
+                minElement = elements.get(i);
+            }
+        }
+
+        return minElement;
+    }
 
     @Override
     public int compareTo(CustomList<T> other) {
@@ -72,4 +86,5 @@ public class CustomList <T extends Comparable<T>> implements Comparable<CustomLi
             return thisMax.compareTo(otherMax);
         }
     }
+
 }
