@@ -2,7 +2,7 @@ package BoxGeneric;
 
 import java.util.List;
 
-public class Box <T> {
+public class Box <T extends Comparable<T>> implements Comparable<Box<T>> {
     private T item;
 
     public Box(T item) {
@@ -20,4 +20,10 @@ public class Box <T> {
         list.set(firstIndex, list.get(secondIndex));
         list.set(secondIndex, tempItem);
     }
+
+    @Override
+    public int compareTo(Box<T> newItem) {
+        return this.item.compareTo(newItem.item);
+    }
+
 }
